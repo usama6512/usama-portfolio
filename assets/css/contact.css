@@ -1,0 +1,89 @@
+/* ============================================================
+   CONTACT PAGE (Step 6) — inquiry form, contact cards, social
+   tiles, demo badges. Reuses :root system from styles.css.
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:26px;align-items:start}
+
+/* ---------- form card ---------- */
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:44px}
+.form-card h2{font-family:var(--font-display);font-size:1.5rem;letter-spacing:-.3px;margin-bottom:8px}
+.form-card > p{color:var(--muted);font-size:.95rem;margin-bottom:30px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.72rem;font-weight:700;letter-spacing:1.6px;
+  text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.field label b{color:var(--orange);font-weight:700}
+.field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.04);
+  border:1px solid var(--line);border-radius:14px;padding:14px 17px;color:var(--text);
+  font-family:var(--font-body);font-size:.95rem;outline:none;
+  transition:border-color .3s,box-shadow .3s,background .3s}
+.field textarea{min-height:140px;resize:vertical}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:44px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23A9ADBA' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center}
+.field select option{background:#15151D;color:var(--text)}
+.field input::placeholder,.field textarea::placeholder{color:var(--faint)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange);
+  background:rgba(255,107,26,.05);box-shadow:0 0 0 4px rgba(255,107,26,.14)}
+.form-card .btn{width:100%;justify-content:center;margin-top:8px}
+.form-note{margin-top:16px;font-size:.82rem;color:var(--faint);text-align:center}
+.form-success{display:none;margin-bottom:22px;border:1px solid rgba(61,220,132,.45);
+  background:rgba(61,220,132,.08);border-radius:var(--radius-sm);padding:18px 20px;
+  color:#c9f5dd;font-size:.92rem}
+.form-success.show{display:block;animation:pop .45s var(--ease)}
+.form-success strong{display:block;font-family:var(--font-display);margin-bottom:4px;color:#3ddc84}
+@keyframes pop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* ---------- info side ---------- */
+.info-side{display:grid;gap:16px}
+.demo-notice{border:1px dashed rgba(255,158,44,.55);background:rgba(255,107,26,.07);
+  border-radius:var(--radius-sm);padding:16px 20px;font-size:.86rem;color:#FFcf9e}
+.demo-notice strong{color:#FFB25E;font-family:var(--font-display)}
+.c-card{display:flex;align-items:center;gap:16px;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 20px;
+  transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.c-card:hover{transform:translateY(-4px);border-color:rgba(255,107,26,.5);
+  box-shadow:0 18px 36px -16px rgba(255,107,26,.4)}
+.c-card__icon{flex:none;width:50px;height:50px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(150deg,rgba(255,107,26,.18),rgba(59,130,246,.18));
+  border:1px solid rgba(255,255,255,.1)}
+.c-card__icon svg{width:23px;height:23px;stroke:var(--orange)}
+.c-card:nth-child(odd of .c-card) .c-card__icon svg{stroke:#7FB0FF}
+.c-card__txt{flex:1;min-width:0}
+.c-card__txt small{display:block;font-size:.68rem;font-weight:700;letter-spacing:1.8px;
+  text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+.c-card__txt strong{display:block;font-family:var(--font-display);font-size:.98rem;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-card__go{flex:none;font-weight:700;color:var(--orange);font-size:.85rem}
+.demo-badge{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:1.6px;
+  color:#FFB25E;border:1px dashed rgba(255,107,26,.6);border-radius:999px;
+  padding:3px 10px;margin-left:8px;vertical-align:2px}
+.social-tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.s-tile{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.03);
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 15px;
+  transition:transform .3s var(--ease),border-color .3s}
+.s-tile:hover{transform:translateY(-3px);border-color:rgba(59,130,246,.55)}
+.s-tile svg{flex:none;width:20px;height:20px;fill:var(--text)}
+.s-tile div{min-width:0}
+.s-tile strong{display:block;font-size:.84rem;font-family:var(--font-display)}
+.s-tile small{display:block;font-size:.72rem;color:var(--faint);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.tips-card{background:linear-gradient(150deg,rgba(59,130,246,.1),rgba(255,107,26,.08));
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:24px}
+.tips-card h3{font-family:var(--font-display);font-size:1rem;margin-bottom:14px}
+.tips-card .check-list{margin:0}
+.tips-card .check-list li{font-size:.9rem}
+
+/* ---------- browse band ---------- */
+.browse-band{text-align:center;color:var(--muted)}
+.browse-band .hero__ctas{justify-content:center;margin-top:24px}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .contact-grid{grid-template-columns:1fr}
+  .form-card{padding:32px 24px}
+}
+@media(max-width:560px){
+  .form-row{grid-template-columns:1fr}
+  .social-tiles{grid-template-columns:1fr}
+}

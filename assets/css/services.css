@@ -1,0 +1,67 @@
+/* ============================================================
+   SERVICES PAGE (Step 4) — detailed split-cards, best-for tags,
+   pricing-on-request panel. Reuses :root system from styles.css.
+   ============================================================ */
+
+/* ---------- service split-cards ---------- */
+.svc-rows{display:grid;gap:26px}
+.svc-row{display:grid;grid-template-columns:1fr 1fr;background:var(--card);
+  border:1px solid var(--line);border-radius:26px;overflow:hidden;
+  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s}
+.svc-row:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.18);
+  box-shadow:var(--shadow-lg)}
+.svc-row__img{position:relative;min-height:380px;overflow:hidden}
+.svc-row__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform 1s var(--ease)}
+.svc-row:hover .svc-row__img img{transform:scale(1.05)}
+.svc-row__img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent 60%,rgba(21,21,29,.55))}
+.svc-row--flip .svc-row__img{order:2}
+.svc-row--flip .svc-row__img::after{background:linear-gradient(-90deg,transparent 60%,rgba(21,21,29,.55))}
+.svc-row__num{position:absolute;top:20px;left:24px;z-index:1;font-family:var(--font-display);
+  font-size:3rem;font-weight:800;line-height:1;color:rgba(255,255,255,.85);
+  text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.svc-row__body{padding:50px 48px}
+.svc-row__body h3{font-family:var(--font-display);font-size:1.55rem;letter-spacing:-.4px;margin:14px 0 12px}
+.svc-row__body > p{color:var(--muted);font-size:1rem;margin-bottom:6px}
+.svc-row .check-list{margin:22px 0 24px}
+.svc-row .check-list li{font-size:.93rem}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
+.tags span{font-size:.74rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  color:#c9cdd8;background:rgba(255,255,255,.05);border:1px solid var(--line);
+  padding:7px 15px;border-radius:999px}
+.svc-row__cta{display:flex;gap:12px;flex-wrap:wrap}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;
+  color:var(--orange);padding:13px 4px;transition:gap .3s,color .3s}
+.link-arrow:hover{gap:13px;color:#FFB25E}
+.link-arrow svg{width:17px;height:17px}
+
+/* ---------- pricing panel (prices enabled later via Admin) ---------- */
+.price-panel{position:relative;border-radius:28px;padding:70px 40px;text-align:center;
+  background:linear-gradient(150deg,#141019,#101623 60%,#0D1B26);
+  border:1px solid rgba(255,255,255,.12);overflow:hidden}
+.price-panel::before{content:"";position:absolute;width:420px;height:420px;left:50%;top:-200px;
+  transform:translateX(-50%);border-radius:50%;filter:blur(100px);
+  background:radial-gradient(circle,rgba(255,107,26,.35),transparent 65%)}
+.price-panel>*{position:relative;z-index:1}
+.price-panel__icon{width:66px;height:66px;margin:0 auto 22px;border-radius:20px;display:grid;
+  place-items:center;background:linear-gradient(150deg,rgba(255,107,26,.2),rgba(59,130,246,.2));
+  border:1px solid rgba(255,255,255,.14)}
+.price-panel__icon svg{width:30px;height:30px;stroke:var(--orange)}
+.price-panel h2{font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.4rem);
+  letter-spacing:-.5px;margin-bottom:14px}
+.price-panel p{color:var(--muted);max-width:600px;margin:0 auto 12px}
+.price-panel .hero__ctas{justify-content:center;margin:30px 0 20px}
+.price-note{display:inline-block;font-size:.78rem;color:var(--faint);
+  border:1px dashed rgba(255,255,255,.2);padding:8px 18px;border-radius:999px}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .svc-row,.svc-row--flip .svc-row__img{grid-template-columns:1fr}
+  .svc-row--flip .svc-row__img{order:0}
+  .svc-row__img{min-height:260px}
+  .svc-row__img::after,.svc-row--flip .svc-row__img::after{
+    background:linear-gradient(180deg,transparent 60%,rgba(21,21,29,.55))}
+  .svc-row__body{padding:36px 28px}
+  .price-panel{padding:56px 26px}
+}
