@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Usama Habib | Product Photographer</title>
+<!-- EDITABLE: meta description for SEO -->
+<meta name="description" content="Portfolio of Usama Habib — product photography across e-commerce, perfume, skincare, jewelry, watches, food, lifestyle, and creative commercial work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/portfolio.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF6B1A'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='bold' font-size='28' text-anchor='middle' fill='%23140800'%3EUH%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="orbs" aria-hidden="true">
+  <div class="orb orb--orange"></div>
+  <div class="orb orb--blue"></div>
+  <div class="orb orb--orange2"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Usama Habib — home">
+      <span class="brand__mark">UH</span>
+      <span class="brand__text"><strong>Usama Habib</strong><span>Product Photography</span></span>
+    </a>
+    <div class="nav__links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active" aria-current="page">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Let's Work Together</a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal"><span class="dot"></span>Portfolio · Product Studies</span>
+    <h1 class="reveal" data-delay="80">Selected <span class="grad-text">Product Work</span></h1>
+    <p class="lead reveal" data-delay="140">A growing collection of product studies — every image styled, lit, and finished to show the product at its absolute best. Click any image to view it larger.</p>
+    <div class="hero-counts reveal" data-delay="200">
+      <!-- EDITABLE: counts update automatically from gallery items; confirm final numbers -->
+      <span class="hero-count"><b><span id="heroTotal">17</span></b> Product Images</span>
+      <span class="hero-count"><b>8</b> Categories</span>
+      <span class="hero-count"><b><em>100%</em></b> Photography-First</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORY CARDS ================= -->
+<!-- NOTE: sample imagery throughout — replace with Usama's real photographs (same filenames). -->
+<!-- EDITABLE: categories, covers, descriptions (managed from Admin Panel later) -->
+<section id="browse" style="padding-top:56px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow eyebrow--blue"><span class="dot"></span>Browse by Category</span>
+      <h2>Find the Work <span class="grad-text">That Matches Your Product</span></h2>
+      <p>Pick a category to filter the gallery below — each one is shot with its own lighting and styling approach.</p>
+    </div>
+    <div class="catcards">
+      <a class="catcard reveal" href="#gallery" data-goto="ecommerce">
+        <div class="catcard__img"><img src="assets/images/ecom-headphones.jpg" alt="White-background e-commerce headphone photograph" loading="lazy"><span class="catcard__n" data-countfor="ecommerce"></span></div>
+        <div class="catcard__body"><h3>E-commerce &amp; Amazon</h3><p>Clean listing shots for Amazon, Shopify, and marketplaces.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" data-delay="70" href="#gallery" data-goto="perfume">
+        <div class="catcard__img"><img src="assets/images/work-perfume-blue.jpg" alt="Blue perfume bottle with water splash" loading="lazy"><span class="catcard__n" data-countfor="perfume"></span></div>
+        <div class="catcard__body"><h3>Perfume &amp; Fragrance</h3><p>Mood-driven bottle photography matched to the scent.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" data-delay="140" href="#gallery" data-goto="skincare">
+        <div class="catcard__img"><img src="assets/images/work-serum.jpg" alt="Serum dropper bottle beauty macro" loading="lazy"><span class="catcard__n" data-countfor="skincare"></span></div>
+        <div class="catcard__body"><h3>Skincare &amp; Beauty</h3><p>Fresh beauty visuals with accurate color and detail.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" data-delay="210" href="#gallery" data-goto="jewelry">
+        <div class="catcard__img"><img src="assets/images/work-rings.jpg" alt="Gold wedding rings macro" loading="lazy"><span class="catcard__n" data-countfor="jewelry"></span></div>
+        <div class="catcard__body"><h3>Jewelry &amp; Accessories</h3><p>Macro sparkle that shows fine craftsmanship.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" href="#gallery" data-goto="watches">
+        <div class="catcard__img"><img src="assets/images/work-watch-beige.jpg" alt="Minimalist watch on beige podium" loading="lazy"><span class="catcard__n" data-countfor="watches"></span></div>
+        <div class="catcard__body"><h3>Watches</h3><p>Precision close-ups and dramatic light for timepieces.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" data-delay="70" href="#gallery" data-goto="food">
+        <div class="catcard__img"><img src="assets/images/work-juice.jpg" alt="Orange juice bottle with citrus splash" loading="lazy"><span class="catcard__n" data-countfor="food"></span></div>
+        <div class="catcard__body"><h3>Food &amp; Beverage</h3><p>Rich, appetizing shots for packaging and promos.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" data-delay="140" href="#gallery" data-goto="lifestyle">
+        <div class="catcard__img"><img src="assets/images/work-candle.jpg" alt="Scented candle lifestyle scene" loading="lazy"><span class="catcard__n" data-countfor="lifestyle"></span></div>
+        <div class="catcard__body"><h3>Lifestyle Products</h3><p>Products in real-world settings buyers relate to.</p><span class="catcard__go">View category →</span></div>
+      </a>
+      <a class="catcard reveal" data-delay="210" href="#gallery" data-goto="creative">
+        <div class="catcard__img"><img src="assets/images/work-sneaker.jpg" alt="Sneaker floating in dramatic studio light" loading="lazy"><span class="catcard__n" data-countfor="creative"></span></div>
+        <div class="catcard__body"><h3>Creative / Commercial</h3><p>Bold conceptual visuals for campaigns and ads.</p><span class="catcard__go">View category →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" style="padding-top:40px;scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="gal-head reveal">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>The Gallery</span>
+        <h2 style="margin-top:16px">Browse the <span class="grad-text">Collection</span></h2>
+        <p class="gal-count" id="galCount">Showing all works</p>
+      </div>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Filter gallery by category">
+      <button class="tab active" data-filter="all" role="tab">All Work <span class="tab__n"></span></button>
+      <button class="tab" data-filter="ecommerce" role="tab">E-commerce <span class="tab__n"></span></button>
+      <button class="tab" data-filter="perfume" role="tab">Perfume <span class="tab__n"></span></button>
+      <button class="tab" data-filter="skincare" role="tab">Skincare <span class="tab__n"></span></button>
+      <button class="tab" data-filter="jewelry" role="tab">Jewelry <span class="tab__n"></span></button>
+      <button class="tab" data-filter="watches" role="tab">Watches <span class="tab__n"></span></button>
+      <button class="tab" data-filter="food" role="tab">Food &amp; Drink <span class="tab__n"></span></button>
+      <button class="tab" data-filter="lifestyle" role="tab">Lifestyle <span class="tab__n"></span></button>
+      <button class="tab" data-filter="creative" role="tab">Creative <span class="tab__n"></span></button>
+    </div>
+    <p class="gal-desc reveal" id="galDesc"></p>
+
+    <!-- EDITABLE: gallery items — captions + categories (managed from Admin Panel later).
+         Wide items (.gal-item--wide) create the editorial rhythm. -->
+    <div class="gal-grid" id="galGrid">
+      <figure class="gal-item" data-cat="ecommerce" data-title="Headphones · Front Listing Shot" data-desc="Clean front three-quarter angle on pure white — crisp edges, true color, marketplace-ready.">
+        <img src="assets/images/ecom-headphones.jpg" alt="Black wireless headphones on pure white background" loading="lazy">
+        <figcaption><span class="work__pill">E-commerce &amp; Amazon</span><h3>Headphones · Listing Shot</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="watches" data-title="Chronograph Detail" data-desc="Macro watch study with cinematic orange and blue studio lighting.">
+        <img src="assets/images/work-watch.jpg" alt="Luxury chronograph watch in cinematic light" loading="lazy">
+        <figcaption><span class="work__pill">Watches</span><h3>Chronograph Detail</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="skincare" data-title="Dewy Serum Macro" data-desc="Fresh beauty macro — glass dropper with fine water droplets on a soft pastel backdrop.">
+        <img src="assets/images/work-serum.jpg" alt="Glass serum dropper bottle with water droplets" loading="lazy">
+        <figcaption><span class="work__pill">Skincare &amp; Beauty</span><h3>Dewy Serum Macro</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="food" data-title="Roast &amp; Pour" data-desc="Moody coffee study — matte bag, roasted beans, and a warm ceramic pour.">
+        <img src="assets/images/work-coffee.jpg" alt="Coffee bag with beans and latte cup in warm light" loading="lazy">
+        <figcaption><span class="work__pill">Food &amp; Beverage</span><h3>Roast &amp; Pour</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item gal-item--wide" data-cat="creative" data-title="Motion Sneaker Study" data-desc="Floating sneaker frozen mid-air with dramatic orange and blue light — built for campaigns.">
+        <img src="assets/images/work-sneaker.jpg" alt="Sneaker floating in dramatic orange and blue studio light" loading="lazy">
+        <figcaption><span class="work__pill">Creative / Commercial</span><h3>Motion Sneaker Study</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="jewelry" data-title="Gold Pendant Macro" data-desc="Close-up jewelry study on dark silk — soft spotlight tracing the gold.">
+        <img src="assets/images/work-jewelry.jpg" alt="Gold necklace with pendant on dark silk" loading="lazy">
+        <figcaption><span class="work__pill">Jewelry &amp; Accessories</span><h3>Gold Pendant Macro</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="ecommerce" data-title="Pump Bottle · Listing Shot" data-desc="Minimal pump bottle centered on pure white with a soft natural shadow.">
+        <img src="assets/images/ecom-bottle.jpg" alt="White pump bottle on pure white background" loading="lazy">
+        <figcaption><span class="work__pill">E-commerce &amp; Amazon</span><h3>Pump Bottle · Listing Shot</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="perfume" data-title="Blue Bottle Splash" data-desc="Deep-blue fragrance bottle with a frozen water splash — fresh, premium, full of motion.">
+        <img src="assets/images/work-perfume-blue.jpg" alt="Blue perfume bottle with dynamic water splash" loading="lazy">
+        <figcaption><span class="work__pill">Perfume &amp; Fragrance</span><h3>Blue Bottle Splash</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="lifestyle" data-title="Amber Candle Scene" data-desc="Cozy lifestyle scene — amber candle, eucalyptus, and warm window light.">
+        <img src="assets/images/work-candle.jpg" alt="Amber scented candle with eucalyptus in warm light" loading="lazy">
+        <figcaption><span class="work__pill">Lifestyle Products</span><h3>Amber Candle Scene</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="jewelry" data-title="Gold Rings Macro" data-desc="Twin gold bands on a dark reflective surface, sparkling under a soft spotlight.">
+        <img src="assets/images/work-rings.jpg" alt="Two gold wedding rings macro on dark surface" loading="lazy">
+        <figcaption><span class="work__pill">Jewelry &amp; Accessories</span><h3>Gold Rings Macro</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item gal-item--wide" data-cat="ecommerce" data-title="Clean Listing Shot" data-desc="Skincare jar isolated on pure white — the listing-ready standard for online stores.">
+        <img src="assets/images/work-skincare.jpg" alt="Skincare cream jar on pure white background" loading="lazy">
+        <figcaption><span class="work__pill">E-commerce &amp; Amazon</span><h3>Clean Listing Shot</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item gal-item--wide" data-cat="perfume" data-title="Cinematic Fragrance Hero" data-desc="Matte black bottle with gold cap — orange glow against electric-blue rim light.">
+        <img src="assets/images/hero-perfume.jpg" alt="Black perfume bottle with gold cap in orange and blue light" loading="lazy">
+        <figcaption><span class="work__pill">Perfume &amp; Fragrance</span><h3>Cinematic Fragrance Hero</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="food" data-title="Citrus Splash" data-desc="Juice bottle with fresh orange splash frozen mid-motion — bright and thirst-quenching.">
+        <img src="assets/images/work-juice.jpg" alt="Orange juice bottle with citrus splash" loading="lazy">
+        <figcaption><span class="work__pill">Food &amp; Beverage</span><h3>Citrus Splash</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="watches" data-title="Minimal Strap Study" data-desc="Tan leather strap watch on a beige podium in soft warm daylight.">
+        <img src="assets/images/work-watch-beige.jpg" alt="Minimalist watch with tan strap on beige podium" loading="lazy">
+        <figcaption><span class="work__pill">Watches</span><h3>Minimal Strap Study</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="skincare" data-title="Cream Texture Study" data-desc="Open cream jar with an elegant swirl — beauty editorial styling on soft pink.">
+        <img src="assets/images/work-cream.jpg" alt="Open cosmetic cream jar with texture swirl on pink" loading="lazy">
+        <figcaption><span class="work__pill">Skincare &amp; Beauty</span><h3>Cream Texture Study</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="perfume" data-title="Amber Bottle Study" data-desc="Amber glass bottle on a stone podium — quiet luxury with soft long shadows.">
+        <img src="assets/images/work-perfume.jpg" alt="Amber perfume bottle on stone podium" loading="lazy">
+        <figcaption><span class="work__pill">Perfume &amp; Fragrance</span><h3>Amber Bottle Study</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      <figure class="gal-item" data-cat="lifestyle" data-title="Canvas Backpack Scene" data-desc="Warm lifestyle styling — canvas backpack in soft golden sunlight with greenery.">
+        <img src="assets/images/work-backpack.jpg" alt="Canvas backpack in warm lifestyle setting" loading="lazy">
+        <figcaption><span class="work__pill">Lifestyle Products</span><h3>Canvas Backpack Scene</h3></figcaption>
+        <span class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </figure>
+      </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA ================= -->
+<section id="contact-cta" style="padding-top:20px">
+  <div class="wrap">
+    <div class="cta-panel reveal">
+      <span class="eyebrow"><span class="dot"></span>Your Product Could Be Next</span>
+      <h2>Like what you see? Let's shoot <span class="grad-text">your products.</span></h2>
+      <p>Brands, e-commerce sellers, and businesses with products to showcase — tell me about your shoot and I'll take care of the visuals.</p>
+      <div class="hero__ctas">
+        <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+        <a href="services.html" class="btn btn--ghost">View Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html"><span class="brand__mark">UH</span>
+          <span class="brand__text"><strong>Usama Habib</strong><span>Product Photography</span></span></a>
+        <p>Emerging product photographer creating clean e-commerce images and premium commercial visuals.</p>
+        <!-- EDITABLE: social links — Usama to paste real URLs. Empty links show dashed. -->
+        <div class="socials">
+          <a href="#" data-social="instagram" aria-label="Instagram" title="Instagram — add link"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
+          <a href="#" data-social="facebook" aria-label="Facebook" title="Facebook — add link"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg></a>
+          <a href="#" data-social="linkedin" aria-label="LinkedIn" title="LinkedIn — add link"><svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.3zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5z"/></svg></a>
+          <a href="#" data-social="behance" aria-label="Behance" title="Behance — add link"><svg viewBox="0 0 24 24"><path d="M8.8 10.9c.7-.4 1.2-1.2 1.2-2.3 0-2.4-1.7-3.1-3.9-3.1H0v13.1h6.3c2.3 0 4.7-1 4.7-3.9 0-1.4-.6-2.4-2.2-2.9v-.9zm-5-4.5h2c1 0 1.9.2 1.9 1.5S6.8 9.3 5.7 9.3h-2V6.4zm2.3 10.1H3.8v-3.6h2.4c1.2 0 2.1.5 2.1 1.9s-.9 1.7-2.2 1.7zm10.9-8.1c-3 0-4.7 2.3-4.7 5.2 0 3 1.9 4.9 4.9 4.9 2.3 0 3.8-1 4.4-3h-2.3c-.2.7-1 1.1-2 1.1-1.4 0-2.1-.8-2.2-2.4h6.8v-.6c0-2.9-1.6-5.2-4.9-5.2zm-2 4.1c.1-1 .7-2 2-2 1.4 0 1.9 1 2 2H15zm7.5-3.4h-3.6V7.9h3.6v1.2z"/></svg></a>
+          <a href="#" data-social="whatsapp" aria-label="WhatsApp" title="WhatsApp — add link"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="portfolio.html#gallery">Perfume &amp; Fragrance</a></li>
+          <li><a href="portfolio.html#gallery">Skincare &amp; Beauty</a></li>
+          <li><a href="portfolio.html#gallery">Jewelry &amp; Watches</a></li>
+          <li><a href="portfolio.html#gallery">Food &amp; Beverage</a></li>
+          <li><a href="portfolio.html#gallery">E-commerce &amp; Amazon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <!-- EDITABLE: contact links — Usama to paste real info -->
+          <li><a href="#" data-social="email">Email — add link</a></li>
+          <li><a href="#" data-social="whatsapp">WhatsApp — add link</a></li>
+          <li><a href="#" data-social="instagram">Instagram — add link</a></li>
+          <li><a href="contact.html">Contact Page →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Usama Habib · Product Photographer</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+  <div class="lb__backdrop" data-lb-close></div>
+  <figure class="lb__box">
+    <img class="lb__img" id="lbImg" src="" alt="">
+    <figcaption class="lb__cap">
+      <span class="work__pill" id="lbPill"></span>
+      <h3 id="lbTitle"></h3>
+      <p id="lbDesc"></p>
+    </figcaption>
+    <button class="lb__btn lb__close" data-lb-close aria-label="Close viewer"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <button class="lb__btn lb__prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="lb__btn lb__next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    <span class="lb__count" id="lbCount"></span>
+  </figure>
+</div>
+
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel — Usama Habib Portfolio</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Private admin panel for managing the Usama Habib portfolio website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233B82F6'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='bold' font-size='28' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="orbs" aria-hidden="true">
+  <div class="orb orb--orange"></div>
+  <div class="orb orb--blue"></div>
+  <div class="orb orb--orange2"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="adm-top">
+  <span class="brand__mark">UH</span>
+  <h1>Admin Panel<small>Usama Habib · Portfolio Manager</small></h1>
+  <span class="adm-top__sp"></span>
+  <a class="adm-link" href="index.html" target="_blank" rel="noopener">View Site ↗</a>
+  <button class="adm-link adm-link--out adm-hidden" id="admLogout" type="button">Log Out</button>
+</header>
+
+<!-- ================= LOGIN ================= -->
+<div class="adm-auth" id="admAuth">
+  <div class="adm-auth__card">
+    <div class="brand__mark">UH</div>
+    <h2>Welcome back</h2>
+    <p>Sign in to manage your portfolio website.</p>
+    <div class="adm-err" id="admErr">Wrong username or password. Try again.</div>
+    <form id="admLoginForm">
+      <div class="field">
+        <label for="admUser" style="display:block;font-size:.7rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Username</label>
+        <input type="text" id="admUser" autocomplete="username" placeholder="admin" style="width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:12px 15px;color:var(--text);font-size:.9rem;outline:none">
+      </div>
+      <div class="field" style="margin:16px 0 22px">
+        <label for="admPass" style="display:block;font-size:.7rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Password</label>
+        <input type="password" id="admPass" autocomplete="current-password" placeholder="••••••••" style="width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:12px 15px;color:var(--text);font-size:.9rem;outline:none">
+      </div>
+      <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Sign In</button>
+    </form>
+    <div class="adm-testcreds">🔑 <strong>TEST credentials</strong> (change before launch):<br>user <code>admin</code> · pass <code>usama2026</code><br><span style="font-size:.74rem">Front-end login only — read Security notes after signing in.</span></div>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div class="adm-layout adm-hidden" id="admApp">
+  <aside class="adm-side">
+    <nav id="admNav" aria-label="Admin sections">
+      <button class="adm-tab active" data-pane="dashboard" type="button"><span class="ico">📊</span>Dashboard</button>
+      <button class="adm-tab" data-pane="home" type="button"><span class="ico">🏠</span>Home Page</button>
+      <button class="adm-tab" data-pane="portfolio" type="button"><span class="ico">🖼️</span>Portfolio &amp; Images</button>
+      <button class="adm-tab" data-pane="about" type="button"><span class="ico">👤</span>About &amp; Skills</button>
+      <button class="adm-tab" data-pane="services" type="button"><span class="ico">🛠️</span>Services &amp; Prices</button>
+      <button class="adm-tab" data-pane="reels" type="button"><span class="ico">🎬</span>Reels &amp; Video</button>
+      <button class="adm-tab" data-pane="contact" type="button"><span class="ico">✉️</span>Contact &amp; Socials</button>
+      <button class="adm-tab" data-pane="proof" type="button"><span class="ico">⭐</span>Reviews &amp; Awards</button>
+      <button class="adm-tab" data-pane="theme" type="button"><span class="ico">🎨</span>Theme</button>
+      <button class="adm-tab" data-pane="preview" type="button"><span class="ico">👁️</span>Live Preview</button>
+      <button class="adm-tab" data-pane="backup" type="button"><span class="ico">💾</span>Backup &amp; Publish</button>
+    </nav>
+    <div class="adm-meter">
+      <b>Browser storage</b>
+      <div class="adm-meter__bar"><i id="admMeterBar" style="width:2%"></i></div>
+      <span id="admMeterTxt">—</span>
+    </div>
+  </aside>
+
+  <main class="adm-main">
+    <section class="adm-pane active" id="pane-dashboard"></section>
+    <section class="adm-pane" id="pane-home"></section>
+    <section class="adm-pane" id="pane-portfolio"></section>
+    <section class="adm-pane" id="pane-about"></section>
+    <section class="adm-pane" id="pane-services"></section>
+    <section class="adm-pane" id="pane-reels"></section>
+    <section class="adm-pane" id="pane-contact"></section>
+    <section class="adm-pane" id="pane-proof"></section>
+    <section class="adm-pane" id="pane-theme"></section>
+    <section class="adm-pane" id="pane-preview"></section>
+    <section class="adm-pane" id="pane-backup"></section>
+  </main>
+</div>
+
+<div class="adm-toast" id="admToast" role="status"></div>
+
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
